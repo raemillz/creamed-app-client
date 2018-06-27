@@ -20,26 +20,23 @@ class Sweets extends React.Component {
   render() {
     const { sweets, match } = this.props;
     const sortedSweets = sweets.sort(function(a, b) {
-            return b.likes - a.likes;
-          })
+      return b.likes - a.likes;
+    })
 
     return (
       <div>
-      <Switch>
-      <Route exact path={match.url}
-       render={() =>
-      <div className="SweetsContainer">
-      <h1 className="sweetName">Sweets</h1>
-        {sortedSweets.map(sweet => <SweetCard key={sweet.id} sweet={sweet} /> )}
-      </div>
-    }
-    />
-    <Route exact path="/sweets/new" component={SweetForm}/>
-         <Route
-           path="/sweets/:sweetId"
-           component={SweetShow}
-         />
-       </Switch>
+        <Switch>
+          <Route exact path={match.url}
+           render={() =>
+          <div className="SweetsContainer">
+          <h1 className="sweetName">Sweets</h1>
+            {sortedSweets.map(sweet => <SweetCard key={sweet.id} sweet={sweet} /> )}
+          </div>
+          }
+          />
+          <Route exact path="/sweets/new" component={SweetForm}/>
+          <Route path="/sweets/:id" component={SweetShow}/>
+        </Switch>
      </div>
     )
   }
