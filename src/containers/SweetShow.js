@@ -28,10 +28,11 @@ class SweetShow extends Component {
     return (
     <div className='sweetShow'>
       {sweet ? (
-      <div>
-        <h1 className="sweetName">{sweet.name}</h1>
-        <h3><p>Ingredients: <br></br>{sweet.ingredients}</p></h3>
-      </div>
+        <div>
+          <h1 className="sweetName">{sweet.name}</h1>
+          <h3><p>Base: <br></br>{sweet.base}</p></h3>
+          <h3><p>Ingredients: <br></br>{sweet.ingredients}</p></h3>
+        </div>
     ) : (
       <p>Loading...</p>
     )}
