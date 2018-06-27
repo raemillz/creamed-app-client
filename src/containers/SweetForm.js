@@ -21,7 +21,7 @@ class SweetForm extends Component {
   }
 
   render() {
-    const { name, ingredients } = this.props.sweetFormData;
+    const { name, ingredients, base } = this.props.sweetFormData;
 
     return (
       <div>
@@ -40,6 +40,16 @@ class SweetForm extends Component {
         </div>
 
         <div>
+          <label htmlFor="base">Base:</label>
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="base"
+            value={base}
+          />
+        </div>
+
+        <div>
           <label htmlFor="ingredients">Ingredients:</label>
           <textarea
             type="text"
@@ -52,7 +62,7 @@ class SweetForm extends Component {
         <div>
           <button type="submit">Add Sweet</button>
         </div>
-        
+
       </form>
       </div>
     )
