@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
-import Recipes from './containers/Recipes';
-import RecipeForm from './containers/RecipeForm';
-import RecipeShow from './containers/RecipeShow';
+import Sweets from './containers/Sweets';
+import SweetForm from './containers/SweetForm';
+import SweetShow from './containers/SweetShow';
 import About from './components/About';
 import Contact from './components/Contact';
 
@@ -20,9 +20,9 @@ class App extends Component {
               <Container>
               <Switch>
                 <Route exact path='/' component={Home}/>
-                <Route exact path='/recipes' component={Recipes}/>
-                <Route exact path='/recipes/new' component={RecipeForm}/>
-                <Route path='/recipes/:recipeId' component={RecipeShow}/>
+                <Route exact path='/sweets' component={Sweets}/>
+                <Route exact path='/sweets/new' component={SweetForm}/>
+                <Route path='/sweets/:SweetId' component={SweetShow}/>
                 <Route exact path='/about' component={About}/>
                 <Route exact path='/contact' component={Contact}/>
               </Switch>
