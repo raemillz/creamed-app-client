@@ -1,5 +1,6 @@
 const initialState = {
   name: '',
+  base: '',
   ingredients: '',
 }
 
