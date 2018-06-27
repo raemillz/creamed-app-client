@@ -1,4 +1,4 @@
-SWEETimport { resetSweetForm } from './sweetForm';
+import { resetSweetForm } from './sweetForm';
 
 const API_URL = process.env.REACT_APP_API_URL;
 
