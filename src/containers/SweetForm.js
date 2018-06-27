@@ -82,4 +82,4 @@ function mapDispatchToProps(dispatch){
   return bindActionCreators({ updateSweetFormData, createSweet }, dispatch)
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps))(SweetForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SweetForm));

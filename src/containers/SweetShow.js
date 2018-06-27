@@ -61,4 +61,4 @@ function mapDispatchToProps(dispatch){
   return bindActionCreators({ fetchSweet, deleteSweet, likeSweet }, dispatch)
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps))(SweetShow);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SweetShow));

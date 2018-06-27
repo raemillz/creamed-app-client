@@ -10,7 +10,6 @@ import { likeSweet } from '../actions/sweetActions';
 import { bindActionCreators } from 'redux'
 import { withRouter } from 'react-router-dom'
 
-
 class Sweets extends React.Component {
 
   componentDidMount() {
@@ -26,7 +25,7 @@ class Sweets extends React.Component {
     return (
       <div>
         <Switch>
-          <Route exact path={match.url}
+           <Route exact path={match.url}
            render={() =>
           <div className="SweetsContainer">
           <h1 className="sweetName">Sweets</h1>
@@ -34,7 +33,7 @@ class Sweets extends React.Component {
           </div>
           }
           />
-          <Route exact path="/sweets/new" component={SweetForm}/>
+           <Route exact path="/sweets/new" component={SweetForm}/>
           <Route path="/sweets/:id" component={SweetShow}/>
         </Switch>
      </div>
@@ -51,4 +50,5 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch){
   return bindActionCreators({ getSweets, likeSweet }, dispatch)
 }
-export default withRouter(connect(mapStateToProps, mapDispatchToProps))(Sweets);
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Sweets))
