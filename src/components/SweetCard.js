@@ -17,7 +17,7 @@ class SweetCard extends Component {
 		    <br></br>
 		    <img src="http://media.dish.allrecipes.com/wp-content/uploads/2014/11/Allrecipes-Super-Easy-Stir-Fry-1-Position-2.jpg" alt="" className="media" />
 		    <br></br>
-		    <div className="card-read">Read</div>
+		    <div className="card-read"></div>
 				<button onClick={() => {this.props.likeSweet(sweet, sweets)}}>Like</button> {this.props.sweet.likes}
 		  </div>
 		)
