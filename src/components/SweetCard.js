@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import { connect } from 'react-redux';
 import { likeSweet } from '../actions/sweetActions';
+import { bindActionCreators } from 'redux';
 
 class SweetCard extends Component {
 
@@ -25,12 +26,14 @@ class SweetCard extends Component {
 }
 
 
-const mapStateToProps = state => {
+function mapStateToProps(state) {
 	return {
 		sweets: state.sweets
 	}
 }
 
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({ likeSweet }, dispatch)
+}
 
-
-export default connect(mapStateToProps, {likeSweet})(SweetCard);
+export default connect(mapStateToProps, mapDispatchToProps)(SweetCard);

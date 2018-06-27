@@ -1,4 +1,6 @@
 import React from 'react';
+import ErrorPageImage from './ErrorPageImage';
+
 
 const FormError = () => {
   const style = { color: 'red' }

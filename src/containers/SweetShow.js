@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSweet } from '../actions/sweetActions';
 import { deleteSweet } from '../actions/sweetActions';
-// import SweetForm from './SweetForm';
-// import SweetCard from '../components/SweetCard';
-// import Sweets from './Sweets';
+import SweetForm from './SweetForm';
+import SweetCard from '../components/SweetCard';
+import Sweets from './Sweets';
 import LikeButton from '../components/LikeButton';
 import { likeSweet } from '../actions/sweetActions';
+import { bindActionCreators } from 'redux'
+import { withRouter } from 'react-router-dom'
 
 
 
-class SweetShow extends Component {
+
+class SweetShow extends React.Component {
 
 
   handleOnClick = () => {
@@ -18,7 +21,8 @@ class SweetShow extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchSweet(this.props.match.params.sweetId);
+    let sweetId = this.props.match.params.sweetId
+    this.props.fetchSweet(sweetId);
 	}
 
   render() {
@@ -47,10 +51,14 @@ class SweetShow extends Component {
 }
 
 
-const mapStateToProps = (state) => {
+function mapStateToProps(state) {
   return ({
     sweet: state.sweets
   })
 }
 
-export default connect(mapStateToProps, {fetchSweet, deleteSweet, likeSweet})(SweetShow);
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({ fetchSweet, deleteSweet, likeSweet }, dispatch)
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps))(SweetShow);

@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 import { updateSweetFormData } from '../actions/sweetForm';
 import { createSweet } from '../actions/sweetActions';
 import FormError from '../components/FormError';
+import { bindActionCreators } from 'redux'
+import { withRouter } from 'react-router-dom'
 
-class SweetForm extends Component {
+class SweetForm extends React.Component {
 
   handleOnChange = event => {
     const {name, value} = event.target;
@@ -69,14 +71,15 @@ class SweetForm extends Component {
   }
 }
 
-const mapStateToProps = state => {
+function mapStateToProps(state) {
   return {
     sweetFormData: state.sweetFormData,
     errors: state.errors
   }
 }
 
-export default connect(mapStateToProps, {
-  updateSweetFormData,
-  createSweet
-})(SweetForm);
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({ updateSweetFormData, createSweet }, dispatch)
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps))(SweetForm);
