@@ -6,7 +6,7 @@ class LikeButton extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.props.likeSweet} className="likeB">Likes {this.props.recipe.likes}</button>
+        <button onClick={this.props.likeSweet} className="likeB">Likes {this.props.sweet.likes}</button>
       </div>
     )
   }

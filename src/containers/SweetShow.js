@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchSweet } from '../actions/sweetActions';
 import { deleteSweet } from '../actions/sweetActions';
-import SweetForm from './SweetForm';
-import SweetCard from '../components/SweetCard';
-import Sweets from './Sweets';
+// import SweetForm from './SweetForm';
+// import SweetCard from '../components/SweetCard';
+// import Sweets from './Sweets';
 import LikeButton from '../components/LikeButton';
 import { likeSweet } from '../actions/sweetActions';
 

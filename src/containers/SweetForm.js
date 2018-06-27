@@ -24,7 +24,7 @@ class SweetForm extends Component {
     const { name, ingredients, base } = this.props.sweetFormData;
 
     return (
-      <div>
+      <div id="form-container">
         <h1 className="sweetName">Create a New Sweet</h1>
         {this.props.errors === true ? <FormError/> : null}
 
