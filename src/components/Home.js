@@ -1,7 +1,8 @@
 import React from 'react';
-import '../App.css'
-import HomePageImage from './HomePageImage'
-import '../styles/homepage.css'
+import '../App.css';
+import HomePageImage from './HomePageImage';
+import '../styles/homepage.css';
+import SiteInstructions from './SiteInstructions';
 
 class Home extends React.Component {
   render() {
@@ -11,6 +12,9 @@ class Home extends React.Component {
         <h3> blablabla </h3>
         <h3> blablabla </h3>
         <HomePageImage/>
+        <div className="bottom">
+          <SiteInstructions/>
+        </div>
       </div>
     )
   }
