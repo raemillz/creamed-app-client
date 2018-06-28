@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import { withRouter, Route, Switch } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
@@ -11,6 +11,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 
 class App extends React.Component {
+
   render() {
     return (
       <div className="App">
@@ -21,7 +22,7 @@ class App extends React.Component {
               <Route exact path='/' component={Home}/>
               <Route exact path='/sweets' component={Sweets}/>
               <Route exact path='/sweets/new' component={SweetForm}/>
-              <Route path='/sweets/:id' component={SweetShow}/>
+              <Route path='/sweets/:sweetId' component={SweetShow}/>
               <Route exact path='/about' component={About}/>
               <Route exact path='/contact' component={Contact}/>
             </Switch>

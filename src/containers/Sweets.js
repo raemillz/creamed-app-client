@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import '../App.css'
 import SweetCard from '../components/SweetCard';
@@ -25,8 +25,8 @@ class Sweets extends React.Component {
     return (
       <div>
         <Switch>
-           <Route exact path={match.url}
-           render={() =>
+          <Route exact path={match.url}
+          render={ () =>
           <div className="SweetsContainer">
           <h1 className="sweetName">Sweets</h1>
             {sortedSweets.map(sweet => <SweetCard key={sweet.id} sweet={sweet} /> )}
@@ -34,7 +34,7 @@ class Sweets extends React.Component {
           }
           />
            <Route exact path="/sweets/new" component={SweetForm}/>
-          <Route path="/sweets/:id" component={SweetShow}/>
+          <Route path="/sweets/sweetId" component={SweetShow}/>
         </Switch>
      </div>
     )
@@ -43,7 +43,7 @@ class Sweets extends React.Component {
 
 function mapStateToProps(state) {
   return ({
-    sweets: state.sweets
+    sweets: state.sweetsReducer
   })
 }
 

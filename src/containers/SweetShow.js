@@ -1,28 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { fetchSweet } from '../actions/sweetActions';
 import { deleteSweet } from '../actions/sweetActions';
-import SweetForm from './SweetForm';
-import SweetCard from '../components/SweetCard';
-import Sweets from './Sweets';
+// import SweetForm from './SweetForm';
+// import SweetCard from '../components/SweetCard';
+// import Sweets from './Sweets';
 import LikeButton from '../components/LikeButton';
 import { likeSweet } from '../actions/sweetActions';
 import { bindActionCreators } from 'redux'
 import { withRouter } from 'react-router-dom'
 
-
-
-
 class SweetShow extends React.Component {
-
 
   handleOnClick = () => {
     this.props.likeSweet(this.props.sweet[0])
   }
 
   componentDidMount() {
-    let sweetId = this.props.match.params.sweetId
-    this.props.fetchSweet(sweetId);
+    this.props.fetchSweet(this.props.match.params.sweetId);
 	}
 
   render() {
@@ -53,7 +48,7 @@ class SweetShow extends React.Component {
 
 function mapStateToProps(state) {
   return ({
-    sweet: state.sweets
+    sweet: state.sweetsReducer
   })
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ErrorPageImage from './ErrorPageImage';
+// import ErrorPageImage from './ErrorPageImage';
 
 
 const FormError = () => {
