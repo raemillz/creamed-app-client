@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { updateSweetFormData } from '../actions/sweetForm';
 import { createSweet } from '../actions/sweetActions';
@@ -82,4 +82,4 @@ function mapDispatchToProps(dispatch){
   return bindActionCreators({ updateSweetFormData, createSweet }, dispatch)
 }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps))(SweetForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SweetForm));
