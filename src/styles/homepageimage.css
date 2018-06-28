@@ -1,6 +1,41 @@
 #homePageImage {
-  width: 100%;
+  /* Push background to back */
   z-index: -10;
-  position: relative;
-  display: block
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
 }
+/* .roundedsplit::before,
+.roundedsplit::after {
+    position: absolute;
+    content: '';
+    pointer-events: none;}
+
+.roundedsplit {
+    border-radius: 0 0 80px 80px;}
+
+.roundedsplit::before,
+.roundedsplit::after {
+    top: -70px;
+    left: 0;
+    z-index: 10;
+    width: 50%;
+    height: 70px;
+    background: inherit;}
+
+.roundedsplit::before {
+    border-radius: 0 80px 0 0;}
+
+.roundedsplit::after {
+    left: 50%;
+    border-radius: 80px 0 0 0;} */
