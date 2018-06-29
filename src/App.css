@@ -18,3 +18,20 @@
   margin-left: 5%;
   margin-right: 5%
 }
+
+.about {
+  font-family: 'Pacifico', cursive;
+  padding-top: 20px;
+  font-size: 6em;
+  color: black;
+  text-shadow: 3px 3px #CC945B;
+}
+
+.contact {
+  font-family: 'Pacifico', cursive;
+  padding-top: 20px;
+  font-size: 6em;
+  color: black;
+  text-shadow: 3px 3px white;
+}
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
