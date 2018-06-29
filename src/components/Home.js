@@ -9,8 +9,8 @@ class Home extends React.Component {
     return (
       <div className="home">
         <h1 className="title"> Crème de la Cream </h1>
-        <h3> blablabla </h3>
-        <h3> blablabla </h3>
+        <h3 className="subheading"> get inspired. </h3>
+        <h3 className="subheading"> get creative. </h3>
         <HomePageImage/>
         <div className="bottom">
           <SiteInstructions/>

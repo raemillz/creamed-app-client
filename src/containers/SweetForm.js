@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 import { updateSweetFormData } from '../actions/sweetForm';
 import { createSweet } from '../actions/sweetActions';
 import FormError from '../components/FormError';
-import { bindActionCreators } from 'redux'
-import { withRouter } from 'react-router-dom'
+import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router-dom';
+import FormPageImage from '../components/FormPageImage';
+import '../styles/form.css';
 
 class SweetForm extends React.Component {
 
@@ -27,12 +29,14 @@ class SweetForm extends React.Component {
 
     return (
       <div id="form-container">
-        <h1 className="sweetName">Create a New Sweet</h1>
+        <h1 className="title">Create a New Flavor</h1>
         {this.props.errors === true ? <FormError/> : null}
 
-      <form onSubmit={this.handleOnSubmit}>
+      <form className="form" onSubmit={this.handleOnSubmit}>
         <div>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name" className="form-label">Name:</label>
+          <br></br>
+
           <input
             type="text"
             onChange={this.handleOnChange}
@@ -40,9 +44,13 @@ class SweetForm extends React.Component {
             value={name}
           />
         </div>
+        <br></br>
+        <br></br>
 
         <div>
-          <label htmlFor="base">Base:</label>
+          <label htmlFor="base" className="form-label">Base:</label>
+          <br></br>
+
           <input
             type="text"
             onChange={this.handleOnChange}
@@ -50,9 +58,12 @@ class SweetForm extends React.Component {
             value={base}
           />
         </div>
-
+        <br></br>
+        <br></br>
         <div>
-          <label htmlFor="ingredients">Ingredients:</label>
+          <label htmlFor="ingredients" className="form-label">Ingredients:</label>
+          <br></br>
+
           <textarea
             type="text"
             onChange={this.handleOnChange}
@@ -60,12 +71,14 @@ class SweetForm extends React.Component {
             value={ingredients}
           />
         </div>
-
-        <div>
-          <button type="submit">Add Sweet</button>
+        <br></br>
+        <br></br>
+        <div className="">
+          <button className="form-submit" type="submit">Add Sweet</button>
         </div>
 
       </form>
+      <FormPageImage/>
       </div>
     )
   }

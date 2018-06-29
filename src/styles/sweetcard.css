@@ -1,0 +1,15 @@
+.card-title{
+  font-family: 'Pacifico', cursive;
+  font-family: 'Trocchi', serif;
+  color: black;
+  font-weight: bold;
+}
+
+.card-like{
+  font-family: 'Trocchi', serif;
+  color: #2c2d2d;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Trocchi');

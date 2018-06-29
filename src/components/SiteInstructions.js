@@ -25,7 +25,7 @@ class SiteInstructions extends React.Component {
           <Grid.Column>
             <center><img src='http://pngimg.com/uploads/ice_cream/ice_cream_PNG5098.png' height="80" width="40"/></center>
             <h3> VOTE </h3>
-            <p>We can all agree that the only bad ice cream is no ice cream at all. With that being said, *some* ice creams are better than others. Let your voice be heard by liking the ice creams that sound best to you and watch them rise to the top.</p>
+            <p>Let your voice be heard by liking your favorite ice creams and watch them rise to the top.</p>
           </Grid.Column>
         </Grid>
       </div>
