@@ -1,3 +1,24 @@
-#form-container{
-  
+.form{
+  /* text-align: center; */
+  box-sizing: border-box;
+  width : 150px;
+  margin: 0;
+  display: inline-block;
+  /* position: relative; */
 }
+
+.form-label{
+  font-family: 'Trocchi', serif;
+  font-size: 2em;
+  color: black;
+  font-weight: bold;
+}
+
+.form-submit{
+  font-family: 'Trocchi', serif;
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+}
+@import url('https://fonts.googleapis.com/css?family=Trocchi');

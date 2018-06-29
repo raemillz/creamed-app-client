@@ -3,6 +3,7 @@ import '../App.css';
 import { connect } from 'react-redux';
 import { likeSweet } from '../actions/sweetActions';
 import { bindActionCreators } from 'redux';
+import '../styles/sweetcard.css';
 
 class SweetCard extends Component {
 
@@ -15,11 +16,10 @@ class SweetCard extends Component {
 				<a href={`sweets/${sweet.id}`}>
 					<h1 className="card-title">{sweet.name}</h1>
 				</a>
-		    <br></br>
-		    <img src="http://media.dish.allrecipes.com/wp-content/uploads/2014/11/Allrecipes-Super-Easy-Stir-Fry-1-Position-2.jpg" alt="" className="media" />
-		    <br></br>
 		    <div className="card-read"></div>
-				<button onClick={() => {this.props.likeSweet(sweet, sweets)}}>Like</button> {this.props.sweet.likes}
+				<button className="card-title" onClick={() => {this.props.likeSweet(sweet, sweets)}}>Like</button> <div className="card-like">{this.props.sweet.likes}</div>
+				<br></br>
+				<br></br>
 		  </div>
 		)
 	}
