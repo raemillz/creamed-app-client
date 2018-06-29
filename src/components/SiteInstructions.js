@@ -15,7 +15,7 @@ class SiteInstructions extends React.Component {
           <Grid.Column>
             <center><img src='http://pngimg.com/uploads/ice_cream/ice_cream_PNG21002.png' height="80" width="40"/></center>
             <h3> CRAVE </h3>
-            <p>We LOVE ice cream. Browse all of the classics and inventive right here! Just try not to drool all over your keyboard in the process.</p>
+            <p>We LOVE ice cream. Browse both the classics and the bizarre right here! Just try not to drool all over your keyboard in the process.</p>
           </Grid.Column>
           <Grid.Column>
             <center><img src='http://pngimg.com/uploads/ice_cream/ice_cream_PNG20975.png' height="80" width="40"/></center>
