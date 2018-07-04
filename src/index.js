@@ -10,7 +10,7 @@ import sweetsReducer from './reducers/sweetsReducer'
 import './index.css';
 import 'semantic-ui-css/semantic.css';
 import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 import thunk from 'redux-thunk';
 import { chainMiddleware } from 'redux-chain';
 
