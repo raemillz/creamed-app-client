@@ -19,4 +19,4 @@ const rootReducer = combineReducers({ errorsReducer, sweetFormData, sweetsReduce
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(chainMiddleware, thunk)))
 
 ReactDOM.render(<Provider store={store}><Router><App /></Router></Provider>, document.getElementById('root'));
-registerServiceWorker();
+// registerServiceWorker();
