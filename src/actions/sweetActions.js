@@ -1,6 +1,7 @@
 import { resetSweetForm } from './sweetForm';
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = `https://stark-thicket-41791.herokuapp.com`
+// const API_URL = process.env.REACT_APP_API_URL;
 
 // Action Creators
 export const setSweets = sweets => {
