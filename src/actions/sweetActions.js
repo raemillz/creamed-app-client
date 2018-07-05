@@ -35,7 +35,7 @@ export const addLikes = sweet => {
 // Async actions
 export const getSweets= () => {
   return dispatch => {
-    return fetch(`${API_URL}/sweets`)
+    return fetch(`${API_URL}/api/sweets`)
     .then(res => res.json())
     .then(sweets => {
       dispatch(setSweets(sweets))
