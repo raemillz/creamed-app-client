@@ -10,7 +10,7 @@ import sweetsReducer from './reducers/sweetsReducer'
 import './index.css';
 import 'semantic-ui-css/semantic.css';
 import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 import thunk from 'redux-thunk';
 import { chainMiddleware } from 'redux-chain';
 
@@ -19,4 +19,4 @@ const rootReducer = combineReducers({ errorsReducer, sweetFormData, sweetsReduce
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(chainMiddleware, thunk)))
 
 ReactDOM.render(<Provider store={store}><Router><App /></Router></Provider>, document.getElementById('root'));
-// registerServiceWorker();
+registerServiceWorker();
