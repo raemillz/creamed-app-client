@@ -57,7 +57,7 @@ export const fetchSweet = (sweetId) => {
 
 export const createSweet = (sweet, routerHistory) => {
   return dispatch => {
-    return fetch(`${API_URL}/sweets`, {
+    return fetch(`https://stark-thicket-41791.herokuapp.com/api/sweets`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
