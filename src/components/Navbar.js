@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div>
       <Menu>
-        <Menu.Item header><img src='https://pngimg.com/uploads/ice_cream/ice_cream_PNG20983.png'height="30" width="120"/></Menu.Item>
+        <Menu.Item header><img src='https://pngimg.com/uploads/ice_cream/ice_cream_PNG20983.png'height="30" width="120" alt="three ice creams"/></Menu.Item>
         <Menu.Item as={Link} to='/'>
           <Icon name="home"/>
         </Menu.Item>

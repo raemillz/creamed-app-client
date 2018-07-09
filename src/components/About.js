@@ -10,7 +10,7 @@ class About extends React.Component {
         <br></br>
         <br></br>
 
-        <img src='http://pngimg.com/uploads/ice_cream/ice_cream_PNG20991.png'height="250" width="400"/>
+        <img src='http://pngimg.com/uploads/ice_cream/ice_cream_PNG20991.png'height="250" width="400" alt="ice cream icon"/>
         <br></br>
         <br></br>
 

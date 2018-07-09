@@ -17,7 +17,7 @@ class SweetCard extends Component {
 					<h1 className="card-title">{sweet.name}</h1>
 				</a>
 		    <div className="card-read"></div>
-				<button className="card-title" onClick={() => {this.props.likeSweet(sweet, sweets)}}>Like</button> <div className="card-like">{this.props.sweet.likes}</div>
+				<button className="card-title" onClick={() => {this.props.likeSweet(sweet, sweets)}}>Yum!</button> <div className="card-like">{this.props.sweet.likes}</div>
 				<br></br>
 				<br></br>
 		  </div>
