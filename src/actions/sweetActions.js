@@ -36,7 +36,7 @@ export const addLikes = sweet => {
 // Async actions
 export const getSweets= () => {
   return dispatch => {
-    return fetch(`${API_URL}/api/sweets`)
+    return fetch(`${API_URL}/sweets`)
     .then(res => res.json())
     .then(sweets => {
       dispatch(setSweets(sweets))
@@ -47,7 +47,7 @@ export const getSweets= () => {
 
 export const fetchSweet = (sweetId) => {
 	return dispatch => {
-		return fetch(`${API_URL}/api/sweets/${sweetId}`)
+		return fetch(`${API_URL}/sweets/${sweetId}`)
 			.then(response => response.json())
 			.then(sweet => {
 				dispatch(setSweets([sweet]));
@@ -58,7 +58,7 @@ export const fetchSweet = (sweetId) => {
 
 export const createSweet = (sweet, routerHistory) => {
   return dispatch => {
-    return fetch(`${API_URL}/api/sweets`, {
+    return fetch(`${API_URL}/sweets`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -70,11 +70,11 @@ export const createSweet = (sweet, routerHistory) => {
     .then(sweet => {
       dispatch(addSweet(sweet))
       dispatch(resetSweetForm())
-      routerHistory.replace(`/api/sweets/${sweet.id}`)
+      routerHistory.replace(`/sweets/${sweet.id}`)
     })
     .catch(error => {
       dispatch({type: 'error'})
-      routerHistory.replace(`/api/sweets/new`)
+      routerHistory.replace(`/sweets/new`)
      })
   }
 }
@@ -86,7 +86,7 @@ export const deleteSweet = (sweetId, routerHistory) => {
     })
     .then(response => {
       dispatch(removeSweet(sweetId));
-      routerHistory.replace('/api/sweets');
+      routerHistory.replace('/sweets');
     })
     .catch(error => console.log(error))
   }
@@ -95,7 +95,7 @@ export const deleteSweet = (sweetId, routerHistory) => {
 export const likeSweet = (sweet, sweets) => {
   const updatedSweet = Object.assign(...sweet, { likes: sweet.likes + 1 })
   return dispatch => {
-    return fetch(`${API_URL}/api/sweets/${sweet.id}`, {
+    return fetch(`${API_URL}/sweets/${sweet.id}`, {
       method: "PUT",
         headers: {
           'Content-Type': 'application/json'
