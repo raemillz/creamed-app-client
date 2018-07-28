@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import '../styles/sweetcard.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // import SweetShow from '../containers/SweetShow';
+import { HashRouter } from 'react-router-dom'
 
 
 class SweetCard extends Component {
@@ -16,7 +17,9 @@ class SweetCard extends Component {
 
 		return (
 			<div key={sweet.id} className="SweetCard">
+			<HashRouter basename={`${process.env.PUBLIC_URL}/`}/>
 				<Link to={`sweets/${sweet.id}`}><h1 className="card-title">{sweet.name}</h1></Link>
+				// <Link to={`sweets/${sweet.id}`}><h1 className="card-title">{sweet.name}</h1></Link>
 		    <div className="card-read"></div>
 				<button className="card-title" onClick={() => {this.props.likeSweet(sweet, sweets)}}>Yum!</button> <div className="card-like">{this.props.sweet.likes}</div>
 				<br></br>
