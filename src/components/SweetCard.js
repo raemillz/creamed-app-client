@@ -5,7 +5,7 @@ import { likeSweet } from '../actions/sweetActions';
 import { bindActionCreators } from 'redux';
 import '../styles/sweetcard.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import SweetShow from '../containers/SweetShow';
+// import SweetShow from '../containers/SweetShow';
 
 
 class SweetCard extends Component {
