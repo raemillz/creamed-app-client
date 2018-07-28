@@ -3,6 +3,10 @@
   "homepage": "https://raemillz.github.io/creamed-app-client",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.1.0",
+    "node": "6.11.2"
+  },
   "dependencies": {
     "cors": "^2.8.4",
     "react": "^16.4.1",
