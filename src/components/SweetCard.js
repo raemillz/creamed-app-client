@@ -13,7 +13,7 @@ class SweetCard extends Component {
 
 		return (
 			<div key={sweet.id} className="SweetCard">
-				<a href={`https://stark-thicket-41791.herokuapp.com/api/sweets/${sweet.id}`}>
+				<a href={`sweets/${sweet.id}`}> 
 					<h1 className="card-title">{sweet.name}</h1>
 				</a>
 		    <div className="card-read"></div>
