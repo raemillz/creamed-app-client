@@ -19,12 +19,12 @@ class App extends React.Component {
           <Navbar/>
           <Container>
             <Switch>
-              <Route exact path='/' component={Home}/>
-              <Route exact path='/sweets' component={Sweets}/>
-              <Route exact path='/sweets/new' component={SweetForm}/>
+              <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home}/>
+              <Route exact path={`${process.env.PUBLIC_URL}/sweets`} component={Sweets}/>
+              <Route exact path={`${process.env.PUBLIC_URL}/sweets/new`} component={SweetForm}/>
               <Route path={`${process.env.PUBLIC_URL}/sweets/:sweetId`} component={SweetShow}/>
-              <Route exact path='/about' component={About}/>
-              <Route exact path='/contact' component={Contact}/>
+              <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About}/>
+              <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact}/>
             </Switch>
           </Container>
         </div>
