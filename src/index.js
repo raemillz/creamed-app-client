@@ -13,10 +13,11 @@ import App from './App';
 // import registerServiceWorker from './registerServiceWorker';
 import thunk from 'redux-thunk';
 import { chainMiddleware } from 'redux-chain';
+import { HashRouter } from 'react-router-dom'
 
 
 const rootReducer = combineReducers({ errorsReducer, sweetFormData, sweetsReducer })
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(chainMiddleware, thunk)))
 
-ReactDOM.render(<Provider store={store}><Router><App /></Router></Provider>, document.getElementById('root'));
+ReactDOM.render(<Provider store={store}><HashRouter><App /></HashRouter></Provider>, document.getElementById('root'));
 // registerServiceWorker();
